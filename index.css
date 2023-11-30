@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato:ital@1&family=Montserrat:ital,wght@1,200&family=Open+Sans:wght@500&family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&family=Varela+Round&family=Young+Serif&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid {
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    gap: 5px;
+}
+
+.box {
+    border: 10px solid rgb(196, 251, 251);
+}
+
+
+/*lista nav*/
+section {
+    display: flex;
+    justify-content: space-around;  
+    padding-bottom: 15px;
+}
+section li {
+    list-style: none;
+}
+section a {  
+    color: black;
+    text-decoration: none;
+}
+section a:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+    background-color: rgb(196, 251, 251);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*lista nav*/
+
+
+@media (min-width: 300px) {
+    .grid {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media (min-width: 740px) {
+    .grid {
+        grid-template-columns: 90%;
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid {
+        grid-template-columns: 85%;
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: 80%;
+        grid-template-rows: repeat(4, auto);
+    }
+}
