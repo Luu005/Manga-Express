@@ -15,12 +15,15 @@ body {
     border: 10px solid rgb(196, 251, 251);
 }
 
+.b3 {
+    border: none;
+}
 
 /*lista nav*/
 section {
     display: flex;
-    justify-content: space-around;  
-    padding-bottom: 15px;
+    justify-content: space-around;
+    padding-bottom: 15px;  
 }
 section li {
     list-style: none;
@@ -33,10 +36,32 @@ section a:hover {
     transform: scale(1.2, 1.2);
     transition-duration: 0.5s;
     background-color: rgb(196, 251, 251);
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 5px;
 }
 /*lista nav*/
+
+img.imagen {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.best-sellers img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.best-sellers img:hover {
+    cursor: crosshair;
+    width: 200px;
+    opacity: 1;
+    filter: contrast(120%)
+}
 
 
 @media (min-width: 300px) {
@@ -44,25 +69,88 @@ section a:hover {
         grid-template-columns: 100%;
         grid-template-rows: repeat(4, auto);
     }
+
+    img.imagen {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .best-sellers {
+        background-color: rgb(242, 245, 248);
+        width: 440px;
+        height: 300px;
+        display: flex;
+        min-width: 100%;
+    }
+
+    .best-sellers img:hover {
+        cursor: crosshair;
+        width: 80px;
+        opacity: 1;
+        filter: contrast(120%)
+    }
 }
 
 @media (min-width: 740px) {
     .grid {
-        grid-template-columns: 90%;
+        grid-template-columns: 85%;
         grid-template-rows: repeat(4, auto);
+    }
+    img.imagen {
+        width: 85%;
+        display: flex;
+    }
+
+    .best-sellers {
+        display: flex;
+        width: 600px;
+        height: 430px; /*dos px menos*/
+        min-width: 100%;
+    }
+
+    .best-sellers img:hover {
+        cursor: crosshair;
+        width: 250px;
+        opacity: 1;
+        filter: contrast(120%)
     }
 }
 
 @media (min-width: 1000px) {
     .grid {
-        grid-template-columns: 85%;
+        grid-template-columns: 80%;
         grid-template-rows: repeat(4, auto);
+    }
+
+    img.imagen {
+        width: 80%;
+        display: flex;
+    }
+
+    .best-sellers {
+        display: flex;
+        width: 600px;
+        height: 430px; /*dos px menos*/
+        min-width: 100%;
     }
 }
 
 @media (min-width: 1200px) {
     .grid {
-        grid-template-columns: 80%;
+        grid-template-columns: 75%;
         grid-template-rows: repeat(4, auto);
+    }
+    img.imagen {
+        width: 75%;
+        display: flex;
+    }
+
+    .best-sellers {
+        display: flex;
+        width: 600px;
+        height: 430px; /*dos px menos*/
+        min-width: 100%;
     }
 }
